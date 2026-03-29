@@ -1,0 +1,16 @@
+h1{
+    /* 设置颜色 */
+    color: #554040;
+    /* 设置字体大小 */
+    font-size: 50px;
+}
+.classyu{
+    color:#38c02b;
+    font-size: 20px;
+}
+#postw{
+    color: crimson;
+    font-weight: 800;
+    font-style: italic;
+    font-family:"Microsoft YaHei";
+}

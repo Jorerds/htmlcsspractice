@@ -4,26 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>我的网站</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <h1 align="center">我是标题</h1>
     <hr width="500px" />
-    <p>主体</p>
+    <p class="classyu">主体</p>
     <br />
-    <p>测试看看</p>
-    <img src="./img/1.jpg" alt="111" width="300px" />
-    <br />
-    <img src="img/2.jpg" alt="22" width="300px" />
+    <p id="postw">测试看看</p>
+    <div>
+      <img src="./img/1.jpg" alt="111" width="300px" />
+    </div>
+    <div>
+      <img src="img/2.jpg" alt="22" width="300px" />
+    </div>
+    <p>有序列表</p>
     <ol>
       <li>1</li>
       <li>2</li>
       <li>3</li>
     </ol>
+    <p>无序列表</p>
     <ul>
       <li>111</li>
       <li>222</li>
       <li>333</li>
       <li>444</li>
+      <li>
+        <ul>
+          <li>嵌套1</li>
+          <li>嵌套2</li>
+        </ul>
+      </li>
     </ul>
+    <table>
+      <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+      </tr>
+      <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+      </tr>
+      <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+      </tr>
+    </table>
+    <table border="2">
+      <tr>
+        <td colspan="2">水平合并</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+      </tr>
+      <tr>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+      </tr>
+      <tr>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td rowspan="2">垂直合并</td>
+      </tr>
+      <tr>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+        <td>合并单元格</td>
+      </tr>
+    </table>
+    <!-- <form action="" method="post">
+      <input type="text" />
+      <input type="submit" />
+    </form> -->
+    <p>快元素</p>
+    <div></div>
   </body>
 </html>
