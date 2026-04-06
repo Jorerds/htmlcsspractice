@@ -14,3 +14,53 @@ h1{
     font-style: italic;
     font-family:"Microsoft YaHei";
 }
+.box{
+    background-color: rgb(7, 169, 233);
+}
+.ba-img{
+    width: 400px;
+    height: 200px;
+    /* 设置背景图片 */
+    background-image: url('../img/1.jpg');
+    /* 设置背景图片的延伸方式 */
+    background-repeat: no-repeat;
+    /* 设置背景图片尺寸 */
+    /* background-size: cover; */
+    /* 设置图片渲染的位置 */
+    background-position: center center;
+}
+.text-box{
+    /* 设置文本位置 */
+    text-align: center;
+    /* 文本修饰 */
+    text-decoration:overline;
+    /* 英文字母大小写 */
+    text-transform: lowercase;
+    text-indent: 2.5rem;
+}
+table{
+    /* 折叠边框 */
+    border-collapse:collapse;
+    /* 设置表格的宽高 */
+    /* width: 500px;
+    height: 300px; */
+}
+td{
+    /* 设置表格文本对齐方式 */
+    text-align: center;
+    /* 垂直对齐的方式 */
+    vertical-align: top;
+    /* 表格填充 */
+    padding: 10px;
+    /* 表格颜色背景 */
+    background-color: rgb(235, 230, 229);
+    /* 表格字体颜色 */
+    color: rgb(83, 68, 65);
+}
+table,td{
+    /* 设置边框 */
+    border: 2px solid rgb(230, 61, 31);
+}
+.dv1-box h1{
+    text-align: right;
+}
