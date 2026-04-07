@@ -7,14 +7,13 @@
     <style>
       .container {
         background-color: antiquewhite;
-        width: 400px;
         height: 500px;
         /* 设置弹性盒子 */
         display: flex;
         /* 设置弹性盒子摆放的方向 */
         flex-direction: row;
         /* 设置弹性盒子的横轴方向的对齐方式 */
-        justify-content: center;
+        justify-content: space-between;
         /* 设置弹性盒子的纵轴方向的对齐方式 */
         align-items: center;
       }
@@ -22,25 +21,26 @@
         width: 100px;
         height: 100px;
         background-color: blue;
-        flex: 3;
+        /* flex: 3; */
       }
       .box2 {
         width: 100px;
         height: 100px;
         background-color: red;
-        flex: 1;
+        /* flex: 1; */
       }
       .box3 {
         width: 100px;
         height: 100px;
         background-color: yellow;
-        flex: 1;
+        /* flex: 1; */
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="box1"></div>
+      <div class="box2"></div>
       <div class="box2"></div>
       <div class="box3"></div>
     </div>

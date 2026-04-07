@@ -548,11 +548,14 @@ div{
 
 `justify-content`属性设置弹性盒子的横轴方向上的对齐方式
 
-| 值          | 说明          |
-| ---------- | ----------- |
-| flex-start | 位于容器的上方，默认值 |
-| center     | 位于容器的中间     |
-| flex-end   | 位于容器的下方     |
+| 值             | 说明                          |
+| ------------- | --------------------------- |
+| flex-start    | 子元素位于容器的上方，默认值              |
+| center        | 子元素位于容器的中间                  |
+| flex-end      | 子元素位于容器的下方                  |
+| space-between | 子元素均匀分布，首尾元素贴边              |
+| space-around  | 子元素均匀分布，相邻间距相等              |
+| space-evenly  | 子元素均匀分布，所有间距（包括首尾与容器边缘）完全相等 |
 
 `align-items`属性设置弹性盒子的纵轴方向上的对齐方式
 
@@ -823,7 +826,89 @@ div{
 
 设置定位后，可以使用四个方向值进行位置调整：`left、top、right、bottom`
 
+##### 相对定位
 
+```html
+<div class="box-1"></div>
+```
+
+```css
+.box-1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        /* 设置相对定位 */
+        position: relative;
+        left: 200px;
+        top: 1.5rem;
+}
+```
+
+##### 绝对定位
+
+```html
+<div class="box-1"></div>
+<div class="box-2"></div>
+<div class="box-3"></div>
+```
+
+```css
+.box-1 {
+        width: 300px;
+        height: 200px;
+        background-color: brown;
+        /* 绝对定位 */
+        position: absolute;
+        left: 100px;
+        top: 200px;
+}
+.box-2 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(62, 158, 38);
+}
+.box-3 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(37, 102, 175);
+        /* 绝对定位 */
+        position: absolute;
+        left: 50px;
+        top: 60px;
+}
+```
+
+##### 固定定位
+
+```html
+<div class="box-1"></div>
+<div class="box-2"></div>
+```
+
+```css
+.box-1 {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        /* 固定定位 */
+        position: fixed;
+        left: 100px;
+        top: 100px;
+}
+      .box-2 {
+        width: 400px;
+        height: 400px;
+        background-color: rgb(27, 115, 216);
+}
+```
+
+
+
+
+
+##### z-index
+
+该属性是设置元素堆叠顺序，数值越大越在最上层
 
 
 
