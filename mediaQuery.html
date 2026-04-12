@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no"
+    />
+    <title>媒体查询</title>
+    <style>
+      .box-1 {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background-color: yellowgreen;
+      }
+      /* 设置媒体查询，根据不同的尺寸设备来应用不同的样式 */
+      /* 设置最大宽度为768px的样式 */
+      @media screen and (max-width: 768px) {
+        .box-1 {
+          background-color: aqua;
+        }
+      }
+      /* 设置最小宽度为768px与最大宽度996px的样式 */
+      @media screen and (min-width: 768px) and (max-width: 996px) {
+        .box-1 {
+          background-color: blueviolet;
+        }
+      }
+      /* 设置最小宽度为996px的样式 */
+      @media screen and (min-width: 996px) {
+        .box-1 {
+          background-color: yellowgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1"></div>
+  </body>
+</html>

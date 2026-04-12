@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3新特性——动画</title>
+    <style>
+      .box-1 {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(155, 130, 94);
+        /* 设置动画 */
+        animation: myAnimation 3s linear 0s infinite;
+      }
+      .box-1:hover {
+        /* 设置鼠标放上去暂停动画 */
+        animation-play-state: paused;
+      }
+      .box-2 {
+        width: 400px;
+        height: 400px;
+        border-radius: 100%;
+        background-color: blue;
+        margin: 40px auto;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        animation: breathe 2s ease-in-out 0s infinite alternate;
+      }
+      @keyframes breathe {
+        0% {
+          /* 设置透明度 */
+          opacity: 0.2;
+          box-shadow: 0 2px 3px rgba(255, 255, 255, 0.1);
+        }
+        25% {
+          /* 设置透明度 */
+          opacity: 0.3;
+          box-shadow: 0 2px 4px rgba(82, 62, 173, 0.5);
+        }
+        50% {
+          /* 设置透明度 */
+          opacity: 0.5;
+          box-shadow: 0 2px 5px rgba(82, 62, 173, 0.75);
+        }
+        75% {
+          /* 设置透明度 */
+          opacity: 0.8;
+          box-shadow: 0 2px 8px rgba(49, 159, 173, 0.95);
+        }
+        100% {
+          /* 设置透明度 */
+          opacity: 1;
+          box-shadow: 0 2px 8px rgba(50, 184, 105, 1);
+        }
+      }
+      @keyframes myAnimation {
+        0% {
+          background-color: rgb(170, 103, 49);
+        }
+        30% {
+          background-color: rgb(185, 75, 41);
+        }
+        50% {
+          background-color: rgb(223, 45, 21);
+        }
+        80% {
+          background-color: rgb(123, 194, 31);
+        }
+        100% {
+          background-color: rgb(22, 216, 216);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+  </body>
+</html>

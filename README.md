@@ -615,7 +615,7 @@ div{
       }
 ```
 
-##### grid布局（另一种方式）
+#### grid网格布局
 
 `grid`与`flex`一样都是一种非常强大的布局技术
 
@@ -924,6 +924,175 @@ div{
 
 该属性是设置元素堆叠顺序，数值越大越在最上层
 
+#### CSS3新特性
+
+##### 圆角
+
+`border-radius`属性可以设置边框的四个圆角，数值填入越大则越圆
+
+```css
+.box{
+    border-radius:1.5rem;
+}
+```
+
+具体详情请[点击查看](#yuanjiao)
+
+##### 阴影
+
+`box-shadow`向框添加一个或多个阴影
+
+| 值        | 说明               |
+| -------- | ---------------- |
+| h-shadow | 必选，水平阴影的位置       |
+| v-shadow | 必选，垂直阴影的位置       |
+| blur     | 可选，模糊距离(数值越大越模糊) |
+| color    | 可选，阴影的颜色         |
+
+##### 动画
+
+动画是使元素从一种样式逐渐变化为另一种样式的效果
+
+可以改变任意多的样式任意多的次数
+
+用百分比来规定变化的时间（也可以用关键词`from`和`to`）
+
+0%是动画的开始，100%是动画的结束
+
+`@keyframes`这样的属性来设置动画
+
+```css
+@keyframes name {
+        0% {
+        }
+        30% {
+        }
+        50% {
+        }
+        80% {
+        }
+        100% {
+        }
+}
+```
+
+`name`：这个动画的名称，由开发人员自行定义
+
+###### animation执行动画
+
+格式：`animation:name duration timing-function delay iteration-count direction;`
+
+| 值                    | 说明                                  |
+| -------------------- | ----------------------------------- |
+| name                 | 设置动画名称                              |
+| duration             | 设置动画的持续时间                           |
+| timing-function      | 设置动画效果的速率（如下）                       |
+| delay                | 设置动画开始时间（延时执行）                      |
+| iteration-count      | 设置动画循环的次数，`infinite`为无限次数的循环        |
+| direction            | 设置动画播放的方向（如下）                       |
+| animation-play-state | 控制动画的播放状态：running代表播放，而paused代表停止播放 |
+
+| timing-function值 | 描述       |
+| ---------------- | -------- |
+| ease             | 逐渐变慢，默认值 |
+| linear           | 匀速       |
+| ease-in          | 加速       |
+| ease-out         | 减速       |
+| ease-in-out      | 先加速后减速   |
+
+| direction值 | 描述                       |
+| ---------- | ------------------------ |
+| normal     | 默认值，表示向前播放               |
+| alternate  | 动画播放在第偶数次向前播放，第奇数次向反方向播放 |
+
+##### 媒体查询
+
+媒体查询会根据设备的大小自动识别加载不同的样式
+
+###### 设置meta标签
+
+使用设备的宽度作为视图宽度并禁止初始的缩放，在`<head>`标签里加入这个meta标签
+
+```html
+<meta
+   name="viewport"
+  content="width=device-width, initial-scale=1.0,maximum-scale=1,user-scalable=no"
+/>
+```
+
+参数解释
+
+1. `width=device-width`宽度等于当前的设备
+
+2. `initial-scale`初始的缩放比例（默认设置为1.0）
+
+3. `maximum-scale`允许用户缩放到最大比例（默认设置为1.0）
+
+4. `user-scalable`用户是否可以手动缩放（默认设置为no）
+
+```css
+.box-1 {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background-color: yellowgreen;
+}
+      /* 设置媒体查询，根据不同的尺寸设备来应用不同的样式 */
+      /* 设置最大宽度为768px的样式 */
+@media screen and (max-width: 768px) {
+        .box-1 {
+          background-color: aqua;
+        }
+}
+      /* 设置最小宽度为768px与最大宽度996px的样式 */
+@media screen and (min-width: 768px) and (max-width: 996px) {
+        .box-1 {
+          background-color: blueviolet;
+        }
+}
+      /* 设置最小宽度为996px的样式 */
+@media screen and (min-width: 996px) {
+        .box-1 {
+          background-color: yellowgreen;
+        }
+}
+```
+
+#### 雪碧图
+
+CSS Sprite也叫CSS精灵图、CSS雪碧图，是一种网页图片应用处理方式。它允许你将一个页面涉及到的所有零星图片都包含到一张大图中去（常用于表情图片、图标等）
+
+##### 优点
+
+1. 减少图片的字节
+
+2. 减少网页的http请求，提高页面的性能
+
+##### 原理
+
+1. 通过`background-image`引入背景图片
+
+2. 通过`background-position`把背景图片移动到自己所需要的位置
+
+```css
+.box-1 {
+        width: 50px;
+        height: 50px;
+        background-image: url(img/sp.png);
+        background-position: -21px -25px;
+}
+.box-2 {
+        width: 50px;
+        height: 50px;
+        background-image: url(img/sp.png);
+        background-position: -91px -241px;
+}
+```
+
+
+
+
+
 #### ul与li标签的属性
 
 将`li`标签中的实心圆点去掉
@@ -939,7 +1108,7 @@ ul {
 
 `border`属性是设置元素的边框，语法为：`border: [边框大小] [线的样式] [线的颜色]``
 
-##### 边框圆角
+##### <a id="yuanjiao">边框圆角</a>
 
 `border-radius`可以设置边框的四个角的圆角，数值填入越大则越圆
 
@@ -953,8 +1122,8 @@ ul {
 
 - 一个值：`border-radius: 所有角相同`
 
-- 两个值：`border-radius: 左上/右下 右上/左下`
+- 两个值：`border-radius: 左上角/右下角 右上角/左下角`
 
-- 三个值：`border-radius: 左上 右上/右下 左下`
+- 三个值：`border-radius: 左上角 右上角/右下角 左下角`
 
-- 四个值：`border-radius: 左上 右上 右下 左下`
+- 四个值：`border-radius: 左上角 右上角 右下角 左下角`
